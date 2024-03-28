@@ -30,12 +30,19 @@ def crear_archivo(nombre, tipo_lectura):
 
 
 def escribir_archivo(nombre_archivo, tipo_lectura, texto):
-    file = nombre_archivo
-    if os.path.exists(file):
-        with open (nombre_archivo, tipo_lectura) as file:
-            file.write(texto)
+    try:
+
+        file = nombre_archivo
+        if os.path.exists(file):
+            with open (nombre_archivo, tipo_lectura) as file:
+                file.write(texto)
+
+        else:
+            raise ValueError("El modo de lectura es incorrecto.")
 
 
+    except ValueError as error:
+        print(error)
 def eliminar_archivo(archivo_a_eliminar):
     try:
         eliminar = archivo_a_eliminar
@@ -54,4 +61,5 @@ def eliminar_archivo(archivo_a_eliminar):
 
 #res = crear_archivo("texto.txt", "x")
 #resultado = eliminar_archivo("texto.txt")
-resultado = escribir_archivo("texto.txt", "w", "estoy escribiendo un archivo")
+#resultado = escribir_archivo("texto.txt", "w", "estoy escribiendo un archivo")
+resultado = escribir_archivo("texto.txt", "j", "agregando contenido al archivo")
