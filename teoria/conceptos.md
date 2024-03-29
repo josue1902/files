@@ -13,3 +13,7 @@ tenemos varios metodos que podemos usar, pueden estar las siguientes:
 **readline()**: lee el archivo linea por linea
 
 **a**: cumple la misma funcion que el modo de apertura w, solo que este agrega al final de lo que hayamos agreagdo anteriormente
+
+
+
+**archivos logs**: un archivos de registros o logs, son archivos donde se registran mensajes importantes durante la ejecucion de un prgarama, como erroers, advertencias, etc

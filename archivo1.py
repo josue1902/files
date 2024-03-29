@@ -1,21 +1,5 @@
 import os
-import sys
-"""
-Ejercicio: Manejo de archivos con excepciones
-
-Crea un programa en el que el usuario pueda realizar operaciones básicas de manejo de archivos, como crear, leer, escribir y eliminar archivos. 
-El programa debe implementar el manejo de excepciones para manejar situaciones como archivos que no existen, errores de lectura o escritura, entre otros.
-La consigna detallada del ejercicio es la siguiente:
-
-Menú de opciones: El programa debe presentar al usuario un menú con las siguientes opciones:
-
-Crear un nuevo archivo.
-Leer el contenido de un archivo existente.
-Escribir en un archivo existente.
-Eliminar un archivo existente.
-Salir del programa.
-
-"""
+import datetime
 
 
 def crear_archivo(nombre, tipo_lectura):
@@ -25,13 +9,18 @@ def crear_archivo(nombre, tipo_lectura):
         return file
     
 
-    except FileExistsError:
+    except FileExistsError as error:
+        with open("errores.txt", "a") as archivo:
+            fecha_actual = datetime.datetime.now()
+            fecha = fecha_actual.strftime("%d-%m-%Y %H:%M")
+            archivo.write(str(fecha) + str(error) + "\n")
+
+                
         print("El archivo ya existe en el directorio")
 
 
 def escribir_archivo(nombre_archivo, tipo_lectura, texto):
     try:
-
         file = nombre_archivo
         if os.path.exists(file):
             with open (nombre_archivo, tipo_lectura) as file:
@@ -42,7 +31,12 @@ def escribir_archivo(nombre_archivo, tipo_lectura, texto):
 
 
     except ValueError as error:
+        with open("errores.txt", "a") as archivo:
+            fecha_actual = datetime.datetime.now()
+            fecha = fecha_actual.strftime("%d-%m-%Y %H:%M")
+            archivo.write(str(fecha) + str(error) + "\n")
         print(error)
+
 def eliminar_archivo(archivo_a_eliminar):
     try:
         eliminar = archivo_a_eliminar
@@ -53,13 +47,22 @@ def eliminar_archivo(archivo_a_eliminar):
             raise FileNotFoundError("El archivo que queres eliminar no existe")
         
     except FileNotFoundError as error:
+        with open("errores.txt", "a") as archivo:
+            fecha_actual = datetime.datetime.now()
+            fecha = fecha_actual.strftime("%d-%m-%Y %H:%M")
+            archivo.write(str(fecha) + str(error) + "\n")
         print(error)
         
-    except FileExistsError:
-        print("El archivo que queres eliminar no existe")
+    #except FileExistsError:
+        #print("El archivo que queres eliminar no existe")
+
 
 
 #res = crear_archivo("texto.txt", "x")
-#resultado = eliminar_archivo("texto.txt")
-#resultado = escribir_archivo("texto.txt", "w", "estoy escribiendo un archivo")
-resultado = escribir_archivo("texto.txt", "j", "agregando contenido al archivo")
+
+
+resultado = eliminar_archivo("josueee.txt")
+#resultado = escribir_archivo("texto.txt", "josue", "estoy escribiendo un archivo")
+#resultado = escribir_archivo("texto.txt", "j", "agregando contenido al archivo")
+
+
