@@ -1,1 +1,1 @@
-('josue', 'elizondo')('josue', 'elizondo', 'sebastian', 'elizondo')('josue', 'elizondo', 'sebastian', 'elizondo', 'enzo ', 'fernandez')
+('josue', 'elizondo')('sebastian', 'elizondo')('nicolas', 'elizondo')('pedro', 'mamani')('jonas', 'carral')

@@ -58,23 +58,23 @@ def eliminar_archivo(archivo_a_eliminar):
 
 
 
-#res = crear_archivo("texto.txt", "x")
+#res = crear_archivo("texto.txt", "w")
 
 
-#resultado = eliminar_archivo("josueee.txt")
+#resultado = eliminar_archivo("texto.txt")
 #resultado = escribir_archivo("texto.txt", "josue", "estoy escribiendo un archivo")
 #resultado = escribir_archivo("texto.txt", "j", "agregando contenido al archivo")
 
 
 
-tupla = ()
+#tupla = ()
 variable = True
 
 while variable:
 
     nombre = input("Ingresa tu nombre: ")
     apellido = input("Ingresa tu apellido: ")
-    tupla += (nombre, apellido)
+    tupla = (nombre, apellido)
 
     salir = input("Desea salir?: (y/n): ")
     if salir == "y":
@@ -82,8 +82,8 @@ while variable:
 
     print(tupla)
 
-    with open("texto.txt", "a") as archivo:
-        archivo.write(str (tupla))
+
+    resultado = escribir_archivo("texto.txt", "a", str(tupla))
 
 
 """
@@ -94,5 +94,4 @@ es decir (nombre, apellido)
 ('luis', 'perez')
 por cada ingreso se debe guardar una tupla en mi txt, por ahora no vamos a eliminar nada que se guarde
 Vamos a generar un bucle while para hacer funcionar nuestro menú
-
 """

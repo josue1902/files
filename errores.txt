@@ -3,3 +3,4 @@
 29-03-2024 13:28invalid mode: 'josue'
 29-03-2024 13:33El archivo que queres eliminar no existe
 29-03-2024 13:33El archivo que queres eliminar no existe
+29-03-2024 21:00El archivo que queres eliminar no existe
