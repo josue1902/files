@@ -1,0 +1,54 @@
+{
+    "personas": [
+        {
+            "id": 1,
+            "nombre": "Juan",
+            "apellido": "Pérez"
+        },
+        {
+            "id": 2,
+            "nombre": "Ana",
+            "apellido": "Gómez"
+        },
+        {
+            "id": 3,
+            "nombre": "Luis",
+            "apellido": "Martínez"
+        },
+        {
+            "id": 4,
+            "nombre": "Sofía",
+            "apellido": "Fernández"
+        },
+        {
+            "id": 5,
+            "nombre": "Carlos",
+            "apellido": "Navarro"
+        },
+        {
+            "id": 6,
+            "nombre": "Lucía",
+            "apellido": "López"
+        },
+        {
+            "id": 7,
+            "nombre": "Marco",
+            "apellido": "Ruiz"
+        },
+        {
+            "id": 8,
+            "nombre": "Elena",
+            "apellido": "Herrera"
+        },
+        {
+            "id": 9,
+            "nombre": "Pablo",
+            "apellido": "Díaz"
+        },
+        {
+            "id": 10,
+            "nombre": "María",
+            "apellido": "Morales"
+        }
+    ]
+}
